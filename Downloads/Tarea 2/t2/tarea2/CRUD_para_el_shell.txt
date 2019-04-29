@@ -1,0 +1,34 @@
+#####################################################
+##########Operaciones CRUD##########################
+
+
+#Modificar registros
+
+
+
+clientee = chaqueta.objects.get(nombre="Javiera Prado")
+clientee.correo = "jpardof@hotmail.com"
+clientee.save()
+
+clientee = chaqueta.objects.get(nombre="Julieta Venegas")
+clientee.numero = 999936574
+clientee.save()
+
+#Leer registro
+tallas_M = chaqueta.objects.filter(talla="M")
+
+
+#Eliminar registro
+chaqueta1 =chaqueta.objects.get(numero_serie=78254648959583763)
+chaqueta1.delete()
+
+
+#Crear registro
+cliente11 = Cliente(nombre="Juanito Perez", correo="juan@gmail.com", direccion="3 sur 563", ciudad="Valparaiso",numero=969647364)
+cliente11.save()
+
+cliente12 = Cliente(nombre="Pedro Alvarez", correo="pedrito@gmail.com", direccion="3 sur 663", ciudad="Valparaiso",numero=969697364)
+cliente12.save()
+
+
+
